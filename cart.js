@@ -1,5 +1,6 @@
 let cart = {
     'number_of_items': 0,
+    'source_of_order': 'shawarma',
     'delivery': -2,
     'items': {
 
