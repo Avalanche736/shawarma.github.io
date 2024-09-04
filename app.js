@@ -6,7 +6,7 @@ tg.expand();
 
 
 const Http = new XMLHttpRequest();
-const url = 'https://9893-94-250-252-189.ngrok-free.app/';
+const url = 'https://69cd-94-250-252-189.ngrok-free.app/';
 Http.open("GET", url);
 Http.setRequestHeader('ngrok-skip-browser-warning', '0');
 Http.send();
@@ -24,7 +24,7 @@ let food_items
 let additions_items
 let additions_lists_items
 const xhr = new XMLHttpRequest();
-xhr.open("GET", url + "getdata");
+xhr.open("GET", url + "getdata_shawarma");
 xhr.setRequestHeader('ngrok-skip-browser-warning', '0');
 xhr.send();
 xhr.responseType = "json";
