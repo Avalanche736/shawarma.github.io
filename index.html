@@ -73,45 +73,18 @@
           <legend>Способ доставки:</legend>
 
           <div style="margin-bottom: 15px;">
-            <input type="radio" id="huey" name="drone" value="huey" checked onclick="cart['delivery'] = -2; document.getElementById('select_table').setAttribute('disabled', 'true'); document.getElementById('select_table').removeAttribute('size'); document.getElementById('select_table').value='0';"/>
+            <input type="radio" id="huey" name="drone" value="huey" checked onclick="cart['delivery'] = -2; document.getElementById('pack').style.display = 'none';"/>
             <label for="huey">Доставка в кампусе <br>(введите адрес в боте)</label>
           </div>
 
           <div>
-            <input type="radio" id="dewey" name="drone" value="dewey" onclick="cart['delivery'] = 0; document.getElementById('select_table').removeAttribute('disabled'); document.getElementById('select_table').setAttribute('size', '5');"/>
-            <label for="dewey">Принести к столику</label>
+            <input type="radio" id="dewey" name="drone" value="dewey" onclick="cart['delivery'] = -1; document.getElementById('pack').style.display = 'block';"/>
+            <label for="dewey">Забрать на кассе</label>
           </div>
 
-          <select id="select_table" name="select_table" disabled style="margin-bottom: 15px;">
-              <!--Supplement an id here instead of using 'name'-->
-              <option value="0" selected disabled>Выберите номер столика</option>
-              <option value="-1">Заберу на кассе</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-          </select>
+          <div id="pack" style="display: none;">
+            <input type="checkbox" onclick="cart['pack_to_go'] = !cart['pack_to_go']; console.log(cart);">Упаковать с собой</input>
+          </div>
 
         </fieldset>
 
