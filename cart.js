@@ -311,14 +311,6 @@ function hide_cart() {
 
 function order() {
     console.log(cart);
-    if (cart['delivery'] != -2) {
-        if (document.getElementById('select_table').value == "0") {
-            console.log('select table please');
-            return 0;
-        } else {
-            cart['delivery'] = document.getElementById('select_table').value;
-        }
-    }
 
     tg.sendData(JSON.stringify(cart));
 
